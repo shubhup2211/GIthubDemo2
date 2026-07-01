@@ -1,0 +1,53 @@
+Microsoft Windows [Version 10.0.26200.8655]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\admin\Githubdemo>git remote set-url origin https://github.com/shubhup2211/GIthubDemo2
+
+C:\Users\admin\Githubdemo>git switch -c Amit
+Switched to a new branch 'Amit'
+
+C:\Users\admin\Githubdemo>git push -u origin Amit
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (9/9), 644 bytes | 644.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'Amit' on GitHub by visiting:
+remote:      https://github.com/shubhup2211/GIthubDemo2/pull/new/Amit
+remote:
+To https://github.com/shubhup2211/GIthubDemo2
+ * [new branch]      Amit -> Amit
+branch 'Amit' set up to track 'origin/Amit'.
+
+C:\Users\admin\Githubdemo>git checkout Amit
+Already on 'Amit'
+Your branch is up to date with 'origin/Amit'.
+
+C:\Users\admin\Githubdemo>git fetch origin
+remote: Enumerating objects: 68, done.
+remote: Counting objects: 100% (68/68), done.
+remote: Compressing objects: 100% (38/38), done.
+remote: Total 68 (delta 20), reused 61 (delta 15), pack-reused 0 (from 0)
+Unpacking objects: 100% (68/68), 427.93 KiB | 1.87 MiB/s, done.
+From https://github.com/shubhup2211/GIthubDemo2
+ * [new branch]      bugfix1    -> origin/bugfix1
+ * [new branch]      feature4   -> origin/feature4
+ + 56562e3...ea8697e main       -> origin/main  (forced update)
+ * [new branch]      sahil      -> origin/sahil
+
+C:\Users\admin\Githubdemo>git merge origin/sahil
+fatal: refusing to merge unrelated histories
+
+C:\Users\admin\Githubdemo>git merge origin/sahil --allow-unrelated-histories
+Merge made by the 'ort' strategy.
+ .gitIgnore | 2 ++
+ file1.txt  | 3 +++
+ file2.txt  | 1 +
+ fixes.txt  | 7 +++++++
+ 4 files changed, 13 insertions(+)
+ create mode 100644 .gitIgnore
+ create mode 100644 file1.txt
+ create mode 100644 file2.txt
+ create mode 100644 fixes.txt
